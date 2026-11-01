@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get a Free Quote | Don Morrison — Gutters, Gutter Protection & Lighting</title>
-<meta name="description" content="Request your free quote on gutter protection, seamless gutters, or outdoor lighting in Fort Lauderdale and Broward County. Don Morrison contacts you personally.">
+<meta name="description" content="Request your free quote on gutter protection, seamless gutters, or outdoor lighting in Broward and Palm Beach counties. Don Morrison contacts you personally.">
 <meta name="google-site-verification" content="QB-ssv-MjZdVz-dJ-gzDWv2qY6BC9JkV1xSJGt7VMZ8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>.form-frame{width:100%;border:0;border-radius:14px;background:#fff;min-height:1200px}</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<noscript><style>[data-reveal]{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 <header class="site-header">
@@ -19,7 +20,7 @@
       <span class="brand-name">Don Morrison</span>
       <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
     </div>
-    <nav class="site-nav">
+    <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
       <a href="gutter-protection.html">Gutter Protection</a>
       <a href="outdoor-lighting.html">Lighting</a>
@@ -27,22 +28,67 @@
   </div>
 </header>
 
-<section class="path">
+<section class="quote-hero">
+  <div class="hero-media" data-parallax>
+    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2000&auto=format&fit=crop" alt="A South Florida home at dusk with warm light in the windows" fetchpriority="high">
+  </div>
   <div class="wrap">
     <p class="eyebrow">Free quote</p>
-    <h2>Tell me about your property</h2>
-    <p class="path-lede">Two minutes. Your request comes straight to Don Morrison — not a call center — and you'll hear back personally, usually the same business day, to schedule your free inspection and exact quote.</p>
-    <br>
-    <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdGk5JwO-UGMBGrIiXLYQWV_38x0oaGdinCaGRoL7bvjN6oEw/viewform?embedded=true" loading="lazy" title="Free quote request form">Loading…</iframe>
-    <p class="path-lede" style="margin-top:14px">Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGk5JwO-UGMBGrIiXLYQWV_38x0oaGdinCaGRoL7bvjN6oEw/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+    <h1>Tell me about your property.</h1>
+    <p class="hero-sub">Two minutes. Your request comes straight to Don Morrison — not a call center — and you'll hear back personally, usually the same business day, to schedule your free inspection and exact quote.</p>
+  </div>
+</section>
+
+<section class="quote-main">
+  <div class="wrap">
+    <div class="quote-grid">
+      <aside class="quote-aside" data-reveal>
+        <h3>What happens next</h3>
+        <ol>
+          <li><span><strong>You send the form</strong>Service, city, and how to reach you — two minutes.</span></li>
+          <li><span><strong>Don contacts you personally</strong>Usually the same business day, to schedule your inspection.</span></li>
+          <li><span><strong>Free inspection &amp; exact price</strong>One exact written quote. No ranges, no pressure, no obligation.</span></li>
+        </ol>
+      </aside>
+      <div data-reveal="2">
+        <div class="form-shell">
+          <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdGk5JwO-UGMBGrIiXLYQWV_38x0oaGdinCaGRoL7bvjN6oEw/viewform?embedded=true" loading="lazy" title="Free quote request form">Loading…</iframe>
+        </div>
+        <p class="form-fallback">Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGk5JwO-UGMBGrIiXLYQWV_38x0oaGdinCaGRoL7bvjN6oEw/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap">
-    <p class="footer-honest">Gutter, gutter protection, and lighting services are provided through LeafFilter. This page belongs to Don Morrison, your local contact for those services in Fort Lauderdale and Broward County — quotes requested here go directly to Don, not to a national call center.</p>
+    <p class="footer-honest">Gutter, gutter protection, and lighting services are provided through LeafFilter. This page belongs to Don Morrison, your local contact for those services in Broward and Palm Beach counties — quotes requested here go directly to Don, not to a national call center.</p>
     <p class="footer-small">© 2026 Don Morrison · Fort Lauderdale, FL</p>
+    <p class="footer-small">Photos: Unsplash</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('[data-reveal]').forEach(function(el){io.observe(el);});
+  if(!reduce){
+    var layers = document.querySelectorAll('[data-parallax]'), ticking = false;
+    function update(){
+      layers.forEach(function(el){
+        var r = el.parentElement.getBoundingClientRect();
+        if(r.bottom > 0 && r.top < innerHeight){
+          var p = (r.top + r.height/2 - innerHeight/2) / innerHeight;
+          el.style.transform = 'translateY(' + (p * -36) + 'px)';
+        }
+      });
+      ticking = false;
+    }
+    addEventListener('scroll', function(){ if(!ticking){ requestAnimationFrame(update); ticking = true; } }, {passive:true});
+    update();
+  }
+})();
+</script>
 </body>
 </html>
