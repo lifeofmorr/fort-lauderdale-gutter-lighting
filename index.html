@@ -112,6 +112,48 @@
   </div>
 </section>
 
+<section class="path tint">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Try it</p>
+      <h2>How much gutter does your home actually have?</h2>
+      <p class="path-lede">Slide, tap, and see. This estimates the linear feet of gutter your roofline needs — the number every quote starts from.</p>
+    </div>
+    <div class="estimator" data-reveal>
+      <div class="est-controls">
+        <h3>Roofline estimator</h3>
+        <p>Based on your home's footprint and roofline shape.</p>
+        <div class="est-group">
+          <div class="est-label"><label for="est-sqft">Home size</label><output id="est-sqft-out" for="est-sqft">2,400 sq ft</output></div>
+          <input type="range" id="est-sqft" min="800" max="6000" step="100" value="2400" aria-label="Home size in square feet">
+        </div>
+        <div class="est-group">
+          <span class="est-label" id="est-stories-label">Stories</span>
+          <div class="seg" role="radiogroup" aria-labelledby="est-stories-label">
+            <label class="pill"><input type="radio" name="est-stories" value="1"><span>1 story</span></label>
+            <label class="pill"><input type="radio" name="est-stories" value="2" checked><span>2 stories</span></label>
+            <label class="pill"><input type="radio" name="est-stories" value="3"><span>3 stories</span></label>
+          </div>
+        </div>
+        <div class="est-group">
+          <span class="est-label" id="est-shape-label">Roofline shape</span>
+          <div class="seg" role="radiogroup" aria-labelledby="est-shape-label">
+            <label class="pill"><input type="radio" name="est-shape" value="1" checked><span>Simple</span></label>
+            <label class="pill"><input type="radio" name="est-shape" value="1.12"><span>Average</span></label>
+            <label class="pill"><input type="radio" name="est-shape" value="1.25"><span>Complex</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="est-result">
+        <p class="eyebrow">Estimated gutter run</p>
+        <p class="est-big" id="est-out">126–150 ft</p>
+        <p>A planning estimate from your footprint — your free inspection measures the exact roofline, and your written quote is exact.</p>
+        <a class="btn btn-primary" href="get-a-quote.html">Get my exact quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="how">
   <div class="wrap">
     <div class="section-head" data-reveal>
@@ -244,6 +286,21 @@
         card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
       });
     }
+  }
+  // Roofline estimator — planning estimate from footprint; exact measure happens at the free inspection
+  var sqftEl = document.getElementById('est-sqft');
+  if(sqftEl){
+    var est = function(){
+      var stories = document.querySelector('input[name="est-stories"]:checked');
+      var shape = document.querySelector('input[name="est-shape"]:checked');
+      if(!stories || !shape) return;
+      var per = 4 * Math.sqrt(sqftEl.value / Number(stories.value)) * parseFloat(shape.value);
+      document.getElementById('est-out').textContent = Math.round(per * 0.92) + '–' + Math.round(per * 1.08) + ' ft';
+      document.getElementById('est-sqft-out').textContent = Number(sqftEl.value).toLocaleString('en-US') + ' sq ft';
+    };
+    sqftEl.addEventListener('input', est);
+    document.querySelectorAll('input[name="est-stories"], input[name="est-shape"]').forEach(function(r){ r.addEventListener('change', est); });
+    est();
   }
 })();
 </script>
