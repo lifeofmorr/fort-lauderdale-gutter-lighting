@@ -92,49 +92,19 @@
               </div>
               <div class="field">
                 <label for="f-city">City *</label>
-                <select class="input" id="f-city" name="entry.1256848009" required>
-                  <option value="" disabled selected>Choose</option>
-<option value="Fort Lauderdale">Fort Lauderdale</option>
-              <option value="Wilton Manors">Wilton Manors</option>
-              <option value="Oakland Park">Oakland Park</option>
-              <option value="Plantation">Plantation</option>
-              <option value="Davie">Davie</option>
-              <option value="Weston">Weston</option>
-              <option value="Parkland">Parkland</option>
-              <option value="Coral Springs">Coral Springs</option>
-              <option value="Lighthouse Point">Lighthouse Point</option>
-              <option value="Pompano Beach">Pompano Beach</option>
-              <option value="Hillsboro Beach">Hillsboro Beach</option>
-              <option value="Lauderdale-by-the-Sea">Lauderdale-by-the-Sea</option>
-              <option value="Hollywood">Hollywood</option>
-              <option value="Pembroke Pines">Pembroke Pines</option>
-              <option value="Miramar">Miramar</option>
-              <option value="Deerfield Beach">Deerfield Beach</option>
-              <option value="Coconut Creek">Coconut Creek</option>
-              <option value="Margate">Margate</option>
-              <option value="Dania Beach">Dania Beach</option>
-              <option value="Cooper City">Cooper City</option>
-              <option value="Sunrise">Sunrise</option>
-              <option value="Tamarac">Tamarac</option>
-              <option value="Lauderhill">Lauderhill</option>
-              <option value="Hallandale Beach">Hallandale Beach</option>
-              <option value="Southwest Ranches">Southwest Ranches</option>
-              <option value="Boca Raton">Boca Raton</option>
-              <option value="Delray Beach">Delray Beach</option>
-              <option value="Boynton Beach">Boynton Beach</option>
-              <option value="Lake Worth Beach">Lake Worth Beach</option>
-              <option value="West Palm Beach">West Palm Beach</option>
-              <option value="Palm Beach Gardens">Palm Beach Gardens</option>
-              <option value="Jupiter">Jupiter</option>
-              <option value="Wellington">Wellington</option>
-              <option value="Royal Palm Beach">Royal Palm Beach</option>
-              <option value="Option 35">Option 35</option>
-                </select>
+                <select class="input" id="f-city" name="entry.1256848009" required><option value="" disabled selected>Choose</option><option value="Fort Lauderdale">Fort Lauderdale</option><option value="Wilton Manors">Wilton Manors</option><option value="Oakland Park">Oakland Park</option><option value="Plantation">Plantation</option><option value="Davie">Davie</option><option value="Weston">Weston</option><option value="Parkland">Parkland</option><option value="Coral Springs">Coral Springs</option><option value="Lighthouse Point">Lighthouse Point</option><option value="Pompano Beach">Pompano Beach</option><option value="Hillsboro Beach">Hillsboro Beach</option><option value="Lauderdale-by-the-Sea">Lauderdale-by-the-Sea</option><option value="Hollywood">Hollywood</option><option value="Pembroke Pines">Pembroke Pines</option><option value="Miramar">Miramar</option><option value="Deerfield Beach">Deerfield Beach</option><option value="Coconut Creek">Coconut Creek</option><option value="Margate">Margate</option><option value="Dania Beach">Dania Beach</option><option value="Cooper City">Cooper City</option><option value="Sunrise">Sunrise</option><option value="Tamarac">Tamarac</option><option value="Lauderhill">Lauderhill</option><option value="Hallandale Beach">Hallandale Beach</option><option value="Southwest Ranches">Southwest Ranches</option><option value="Boca Raton">Boca Raton</option><option value="Delray Beach">Delray Beach</option><option value="Boynton Beach">Boynton Beach</option><option value="Lake Worth Beach">Lake Worth Beach</option><option value="West Palm Beach">West Palm Beach</option><option value="Palm Beach Gardens">Palm Beach Gardens</option><option value="Jupiter">Jupiter</option><option value="Wellington">Wellington</option><option value="Royal Palm Beach">Royal Palm Beach</option><option value="Greenacres">Greenacres</option><option value="Palm Beach">Palm Beach</option><option value="Highland Beach">Highland Beach</option><option value="Lantana">Lantana</option><option value="North Palm Beach">North Palm Beach</option><option value="Juno Beach">Juno Beach</option><option value="Riviera Beach">Riviera Beach</option><option value="Lake Park">Lake Park</option><option value="Tequesta">Tequesta</option><option value="Other / nearby">Other / nearby</option></select>
               </div>
             </div>
             <div class="field">
               <label for="f-notes">Tell us about the property (size, stories, current gutters/lighting, timing)</label>
               <textarea class="input" id="f-notes" name="entry.735945669" rows="4"></textarea>
+            </div>
+            <div class="live-summary" id="live-summary">
+              <span class="live-summary-dot" aria-hidden="true"></span>
+              <div>
+                <span class="live-summary-label">Your project</span>
+                <p class="live-summary-text" id="live-summary-text" aria-live="polite">Choose a service, a property type, and your city — your project summary builds here as you go.</p>
+              </div>
             </div>
             <button class="btn btn-primary form-submit" type="submit">Request My Free Quote</button>
             <p class="form-note">Your request goes directly to Don Morrison — not to a national call center.</p>
@@ -180,10 +150,59 @@
     var sel = document.getElementById('f-need');
     for(var i = 0; i < sel.options.length; i++){ if(sel.options[i].value === need){ sel.selectedIndex = i; break; } }
   }
+  var property = q.get('property');
+  if(property){
+    var radios = document.querySelectorAll('input[name="entry.295350737"]');
+    for(var r = 0; r < radios.length; r++){ if(radios[r].value === property){ radios[r].checked = true; break; } }
+  }
+  var city = q.get('city');
+  if(city){
+    var csel = document.getElementById('f-city');
+    for(var c = 0; c < csel.options.length; c++){ if(csel.options[c].value === city){ csel.selectedIndex = c; break; } }
+  }
   // After the form posts into the hidden sink, continue to the thanks page
   document.getElementById('quote-sink').addEventListener('load', function(){
     if(window.quoteSubmitted){ window.location.href = 'thanks.html'; }
   });
+})();
+</script>
+<script>
+(function(){
+  // Live project summary — reads the visitor's own selections only.
+  // Display-only: it never renames, reorders, or intercepts any form field or the submit.
+  var box = document.getElementById('live-summary');
+  var out = document.getElementById('live-summary-text');
+  if(!box || !out) return;
+  var form = document.querySelector('.quote-form');
+  var needSel = document.getElementById('f-need');
+  var citySel = document.getElementById('f-city');
+  var propWords = {
+    'Residential — single-family home': 'a single-family home',
+    'Residential — condo / townhome': 'a condo / townhome',
+    'Commercial property': 'a commercial property',
+    'Property manager / HOA (multiple properties)': 'multiple properties (property manager / HOA)'
+  };
+  function update(){
+    var propEl = form.querySelector('input[name="entry.295350737"]:checked');
+    var need = needSel.value, city = citySel.value;
+    var prop = propEl ? (propWords[propEl.value] || propEl.value) : '';
+    if(need && prop && city){
+      out.textContent = need + ' for ' + prop + ' in ' + city + ' — free inspection, one exact written quote, no obligation.';
+      box.classList.add('ready');
+    } else {
+      var chosen = [];
+      if(need) chosen.push(need);
+      if(prop) chosen.push(prop);
+      if(city) chosen.push('in ' + city);
+      out.textContent = chosen.length
+        ? chosen.join(' · ') + ' — keep going: a couple more choices and your summary is complete.'
+        : 'Choose a service, a property type, and your city — your project summary builds here as you go.';
+      box.classList.remove('ready');
+    }
+  }
+  form.addEventListener('input', update);
+  form.addEventListener('change', update);
+  update();
 })();
 </script>
 </body>

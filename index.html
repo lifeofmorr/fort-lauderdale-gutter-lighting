@@ -90,6 +90,182 @@
   </div>
 </section>
 
+<section class="plan-band">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow">Plan your project</p>
+      <h2>Build your project. Watch the house change.</h2>
+      <p class="path-lede">Tap through the choices — the house on the right shows what each service actually does. When it looks right, send it to Don: the free inspection turns it into one exact written price.</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-controls" data-reveal>
+        <h3>Your project</h3>
+        <p>Three quick choices and your city. Nothing is priced sight-unseen — that's what the free inspection is for.</p>
+        <div class="plan-group">
+          <span class="est-label" id="plan-service-label">1 · Service</span>
+          <div class="seg" role="radiogroup" aria-labelledby="plan-service-label">
+            <label class="pill"><input type="radio" name="plan-service" value="Gutter protection (guards)" data-label="Gutter protection" data-stage="guards" checked><span>Gutter protection</span></label>
+            <label class="pill"><input type="radio" name="plan-service" value="New gutters / replacement" data-label="New gutters" data-stage="new"><span>New gutters</span></label>
+            <label class="pill"><input type="radio" name="plan-service" value="Outdoor lighting (permanent roofline)" data-label="Permanent roofline lighting" data-stage="roofline"><span>Permanent roofline lighting</span></label>
+            <label class="pill"><input type="radio" name="plan-service" value="Landscape lighting" data-label="Landscape lighting" data-stage="landscape"><span>Landscape lighting</span></label>
+            <label class="pill"><input type="radio" name="plan-service" value="Holiday lighting installation" data-label="Holiday lighting" data-stage="holiday"><span>Holiday lighting</span></label>
+            <label class="pill"><input type="radio" name="plan-service" value="Gutters + lighting together" data-label="Gutters + lighting" data-stage="combo"><span>Gutters + lighting</span></label>
+          </div>
+        </div>
+        <div class="plan-group">
+          <span class="est-label" id="plan-property-label">2 · Property</span>
+          <div class="seg" role="radiogroup" aria-labelledby="plan-property-label">
+            <label class="pill"><input type="radio" name="plan-property" value="Residential — single-family home" data-label="single-family home" data-stage="home" checked><span>Single-family</span></label>
+            <label class="pill"><input type="radio" name="plan-property" value="Residential — condo / townhome" data-label="condo / townhome" data-stage="condo"><span>Condo / townhome</span></label>
+            <label class="pill"><input type="radio" name="plan-property" value="Commercial property" data-label="commercial property" data-stage="commercial"><span>Commercial</span></label>
+          </div>
+        </div>
+        <div class="plan-group">
+          <span class="est-label" id="plan-size-label">3 · Size</span>
+          <div class="seg" role="radiogroup" aria-labelledby="plan-size-label">
+            <label class="pill"><input type="radio" name="plan-size" value="1 story" data-adj="1-story" data-stage="1"><span>1 story</span></label>
+            <label class="pill"><input type="radio" name="plan-size" value="2 story" data-adj="2-story" data-stage="2" checked><span>2 story</span></label>
+            <label class="pill"><input type="radio" name="plan-size" value="Large" data-adj="large" data-stage="large"><span>Large</span></label>
+          </div>
+        </div>
+        <div class="plan-group">
+          <label class="est-label" for="plan-city">4 · City</label>
+          <select class="input" id="plan-city">
+            <option value="Fort Lauderdale" selected>Fort Lauderdale</option>
+            <option value="Wilton Manors">Wilton Manors</option>
+            <option value="Oakland Park">Oakland Park</option>
+            <option value="Plantation">Plantation</option>
+            <option value="Davie">Davie</option>
+            <option value="Weston">Weston</option>
+            <option value="Parkland">Parkland</option>
+            <option value="Coral Springs">Coral Springs</option>
+            <option value="Lighthouse Point">Lighthouse Point</option>
+            <option value="Pompano Beach">Pompano Beach</option>
+            <option value="Hillsboro Beach">Hillsboro Beach</option>
+            <option value="Lauderdale-by-the-Sea">Lauderdale-by-the-Sea</option>
+            <option value="Hollywood">Hollywood</option>
+            <option value="Pembroke Pines">Pembroke Pines</option>
+            <option value="Miramar">Miramar</option>
+            <option value="Deerfield Beach">Deerfield Beach</option>
+            <option value="Coconut Creek">Coconut Creek</option>
+            <option value="Margate">Margate</option>
+            <option value="Dania Beach">Dania Beach</option>
+            <option value="Cooper City">Cooper City</option>
+            <option value="Sunrise">Sunrise</option>
+            <option value="Tamarac">Tamarac</option>
+            <option value="Lauderhill">Lauderhill</option>
+            <option value="Hallandale Beach">Hallandale Beach</option>
+            <option value="Southwest Ranches">Southwest Ranches</option>
+            <option value="Boca Raton">Boca Raton</option>
+            <option value="Delray Beach">Delray Beach</option>
+            <option value="Boynton Beach">Boynton Beach</option>
+            <option value="Lake Worth Beach">Lake Worth Beach</option>
+            <option value="West Palm Beach">West Palm Beach</option>
+            <option value="Palm Beach Gardens">Palm Beach Gardens</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Royal Palm Beach">Royal Palm Beach</option>
+            <option value="Greenacres">Greenacres</option>
+            <option value="Palm Beach">Palm Beach</option>
+            <option value="Highland Beach">Highland Beach</option>
+            <option value="Lantana">Lantana</option>
+            <option value="North Palm Beach">North Palm Beach</option>
+            <option value="Juno Beach">Juno Beach</option>
+            <option value="Riviera Beach">Riviera Beach</option>
+            <option value="Lake Park">Lake Park</option>
+            <option value="Tequesta">Tequesta</option>
+            <option value="Other / nearby">Other / nearby</option>
+          </select>
+        </div>
+      </div>
+      <div class="plan-side">
+        <div class="plan-stage" id="plan-stage" data-service="guards" data-property="home" data-size="2" data-reveal="2">
+          <svg viewBox="0 0 640 440" role="img" aria-label="Planning illustration of a home that changes with your project choices">
+            <defs>
+              <linearGradient id="planDusk" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#1a3524"/><stop offset="1" stop-color="#0c1f13"/>
+              </linearGradient>
+              <radialGradient id="planGlow" cx=".5" cy=".5" r=".5">
+                <stop offset="0" stop-color="#ffca7a" stop-opacity=".8"/><stop offset="1" stop-color="#ffca7a" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect x="0" y="0" width="640" height="440" fill="url(#planDusk)"/>
+            <circle cx="562" cy="52" r="26" fill="#f2e7c8" opacity=".16"/>
+            <circle cx="562" cy="52" r="15" fill="#f2e7c8" opacity=".9"/>
+            <g id="pvCondo" stroke="rgba(233,226,205,.5)" stroke-width="2" stroke-dasharray="6 6" fill="rgba(233,226,205,.03)">
+              <polygon points="64,264 138,204 214,264" fill="none"/>
+              <rect x="80" y="264" width="120" height="116"/>
+              <rect x="98" y="288" width="26" height="34" fill="none"/>
+              <rect x="150" y="288" width="26" height="34" fill="none"/>
+            </g>
+            <g id="pvHome">
+              <g id="pvWing">
+                <rect x="448" y="268" width="118" height="112" fill="rgba(233,226,205,.07)" stroke="#e9e2cd" stroke-width="2.5"/>
+                <polygon points="440,268 574,268 558,236 456,236" fill="#24352a" stroke="#e9e2cd" stroke-width="2.5"/>
+                <rect class="svg-gutter" x="446" y="268" width="122" height="9" rx="4.5" fill="#9aa7ad" stroke="#c7d0d4" stroke-width="1"/>
+                <rect class="svg-win" x="486" y="298" width="38" height="44" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+              </g>
+              <rect x="205" y="262" width="230" height="118" fill="rgba(233,226,205,.07)" stroke="#e9e2cd" stroke-width="2.5"/>
+              <g class="f2">
+                <rect x="205" y="190" width="230" height="72" fill="rgba(233,226,205,.07)" stroke="#e9e2cd" stroke-width="2.5"/>
+                <rect class="svg-win" x="234" y="208" width="32" height="38" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+                <rect class="svg-win" x="356" y="208" width="32" height="38" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+              </g>
+              <rect class="svg-win" x="228" y="292" width="34" height="44" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+              <rect x="300" y="296" width="40" height="84" fill="#31473a" stroke="#e9e2cd" stroke-width="2"/>
+              <circle cx="332" cy="340" r="2.6" fill="#cda861"/>
+              <rect class="svg-win" x="368" y="292" width="34" height="44" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+              <g class="roofmove">
+                <polygon points="182,192 320,106 458,192" fill="#24352a" stroke="#e9e2cd" stroke-width="2.5"/>
+                <g class="svg-rldots" fill="#ffd98c" style="filter: drop-shadow(0 0 6px rgba(255,217,140,.95))">
+                  <circle cx="293" cy="117" r="4.5"/><circle cx="266" cy="134" r="4.5"/><circle cx="239" cy="151" r="4.5"/><circle cx="212" cy="168" r="4.5"/>
+                  <circle cx="347" cy="117" r="4.5"/><circle cx="374" cy="134" r="4.5"/><circle cx="401" cy="151" r="4.5"/><circle cx="428" cy="168" r="4.5"/>
+                </g>
+                <path class="svg-guardcap" d="M190,190 Q320,174 450,190" fill="none" stroke="#cda861" stroke-width="5" stroke-linecap="round"/>
+                <rect class="svg-gutter" x="188" y="192" width="264" height="11" rx="5.5" fill="#9aa7ad" stroke="#c7d0d4" stroke-width="1"/>
+                <path class="svg-spout" d="M447,203 L447,308" fill="none" stroke="#9aa7ad" stroke-width="7" stroke-linecap="round"/>
+              </g>
+              <path class="svg-spout" d="M447,306 L447,378" fill="none" stroke="#9aa7ad" stroke-width="7" stroke-linecap="round"/>
+            </g>
+            <g id="pvComm">
+              <rect x="168" y="176" width="320" height="204" fill="rgba(233,226,205,.07)" stroke="#e9e2cd" stroke-width="2.5"/>
+              <rect class="svg-gutter" x="158" y="156" width="340" height="10" rx="5" fill="#9aa7ad" stroke="#c7d0d4" stroke-width="1"/>
+              <rect x="158" y="166" width="340" height="10" fill="#24352a" stroke="#e9e2cd" stroke-width="2"/>
+              <g class="svg-rldots" fill="#ffd98c" style="filter: drop-shadow(0 0 6px rgba(255,217,140,.95))">
+                <circle cx="188" cy="148" r="4.5"/><circle cx="238" cy="148" r="4.5"/><circle cx="288" cy="148" r="4.5"/><circle cx="338" cy="148" r="4.5"/><circle cx="388" cy="148" r="4.5"/><circle cx="438" cy="148" r="4.5"/>
+              </g>
+              <rect class="svg-win" x="346" y="206" width="118" height="54" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+              <polygon points="182,288 326,288 312,260 196,260" fill="#8a6c38"/>
+              <rect class="svg-win" x="190" y="288" width="118" height="92" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+              <rect x="330" y="296" width="42" height="84" fill="#31473a" stroke="#e9e2cd" stroke-width="2"/>
+              <rect class="svg-win" x="396" y="296" width="66" height="40" fill="#2a3f33" stroke="#e9e2cd" stroke-width="2"/>
+            </g>
+            <g>
+              <ellipse class="ls-glow" cx="168" cy="368" rx="52" ry="24" fill="url(#planGlow)"/>
+              <ellipse class="ls-glow" cx="478" cy="368" rx="58" ry="26" fill="url(#planGlow)"/>
+              <ellipse class="ls-glow" cx="320" cy="392" rx="70" ry="20" fill="url(#planGlow)"/>
+              <ellipse cx="168" cy="374" rx="27" ry="14" fill="#2c5238"/>
+              <ellipse cx="478" cy="374" rx="31" ry="16" fill="#2c5238"/>
+              <ellipse cx="238" cy="380" rx="20" ry="10" fill="#2c5238"/>
+              <g class="ls-dots" fill="#ffd98c" style="filter: drop-shadow(0 0 5px rgba(255,217,140,.95))">
+                <circle cx="292" cy="398" r="3.5"/><circle cx="320" cy="410" r="3.5"/><circle cx="348" cy="398" r="3.5"/>
+              </g>
+            </g>
+            <rect x="0" y="380" width="640" height="60" fill="#08170d"/>
+          </svg>
+          <span class="plan-stage-tag">Planning illustration</span>
+        </div>
+        <div class="plan-result" data-reveal="3">
+          <p class="eyebrow">Your project</p>
+          <p class="plan-summary" id="plan-summary" aria-live="polite">Gutter protection for a 2-story single-family home in Fort Lauderdale. At your free inspection, Don measures your roofline and gutter run on site — most inspections take about 30 minutes. Don will bring exact pricing to your free inspection — no obligation.</p>
+          <p class="plan-includes">Every free quote includes the on-site measurement, a condition check of your current gutters and roofline, and one exact written price.</p>
+          <a class="btn btn-primary" id="plan-cta" href="get-a-quote.html?need=Gutter%20protection%20(guards)&amp;property=Residential%20%E2%80%94%20single-family%20home&amp;city=Fort%20Lauderdale">Send My Project to Don</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="band">
   <div class="band-media" data-parallax>
     <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2000&auto=format&fit=crop" alt="Elegant home exterior in daylight" loading="lazy">
@@ -302,6 +478,43 @@
     document.querySelectorAll('input[name="est-stories"], input[name="est-shape"]').forEach(function(r){ r.addEventListener('change', est); });
     est();
   }
+})();
+</script>
+<script>
+(function(){
+  // "Plan your project" — stage + summary + quote link preselects.
+  var stage = document.getElementById('plan-stage');
+  if(!stage) return;
+  var summary = document.getElementById('plan-summary');
+  var cta = document.getElementById('plan-cta');
+  var citySel = document.getElementById('plan-city');
+  function picked(name){
+    return document.querySelector('input[name="' + name + '"]:checked');
+  }
+  function update(){
+    var svc = picked('plan-service'), prop = picked('plan-property'), size = picked('plan-size');
+    if(!svc || !prop || !size) return;
+    var city = citySel.value;
+    stage.setAttribute('data-service', svc.getAttribute('data-stage'));
+    stage.setAttribute('data-property', prop.getAttribute('data-stage'));
+    stage.setAttribute('data-size', size.getAttribute('data-stage'));
+    var text;
+    if(prop.getAttribute('data-stage') === 'commercial'){
+      text = svc.getAttribute('data-label') + ' for a commercial property in ' + city + '.';
+    } else {
+      text = svc.getAttribute('data-label') + ' for a ' + size.getAttribute('data-adj') + ' ' + prop.getAttribute('data-label') + ' in ' + city + '.';
+    }
+    text += ' At your free inspection, Don measures your roofline and gutter run on site — most inspections take about 30 minutes. Don will bring exact pricing to your free inspection — no obligation.';
+    summary.textContent = text;
+    cta.href = 'get-a-quote.html?need=' + encodeURIComponent(svc.value) +
+               '&property=' + encodeURIComponent(prop.value) +
+               '&city=' + encodeURIComponent(city);
+  }
+  document.querySelectorAll('input[name="plan-service"], input[name="plan-property"], input[name="plan-size"]').forEach(function(r){
+    r.addEventListener('change', update);
+  });
+  citySel.addEventListener('change', update);
+  update();
 })();
 </script>
 </body>
