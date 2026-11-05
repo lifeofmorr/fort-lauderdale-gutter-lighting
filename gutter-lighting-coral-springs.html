@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gutters, Gutter Protection & Lighting in Coral Springs, FL | Don Morrison</title>
+<title>Gutters, Gutter Protection & Lighting in Coral Springs, FL | Fortress Gutter Co.</title>
 <meta name="description" content="Gutter protection, seamless gutters, and outdoor lighting for homes and businesses in Coral Springs, FL — including Eagle Trace, Ramblewood, and The Hills. Free inspection and exact written quote from Don Morrison. Services provided through LeafFilter.">
 <meta name="google-site-verification" content="QB-ssv-MjZdVz-dJ-gzDWv2qY6BC9JkV1xSJGt7VMZ8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Coral Springs","provider":{"@type":"LocalBusiness","name":"Don Morrison — Gutters, Gutter Protection & Lighting"},"areaServed":{"@type":"City","name":"Coral Springs","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Coral Springs, FL. Services provided through LeafFilter."}
+{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Coral Springs","provider":{"@type":"LocalBusiness","name":"Fortress Gutter Co."},"areaServed":{"@type":"City","name":"Coral Springs","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Coral Springs, FL. Services provided through LeafFilter."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Coral Springs' tree canopy keeps clogging my gutters — what actually fixes it?","acceptedAnswer":{"@type":"Answer","text":"A fitted gutter protection system: leaves and debris stay on top of the guard and dry out or blow off, while rain passes through into the gutter and downspouts. The free inspection confirms your gutters are sound enough to protect, or gives you one exact written quote for replacement."}},{"@type":"Question","name":"Do you quote commercial properties in Coral Springs?","acceptedAnswer":{"@type":"Answer","text":"Yes — retail and offices along University Drive and Sample Road, The Walk downtown, and HOA or property-manager accounts across the city, all with one local contact."}},{"@type":"Question","name":"How much will it cost for my home?","acceptedAnswer":{"@type":"Answer","text":"It depends on roofline length and gutter condition, which is why the inspection is free and the price is exact and in writing before you decide anything. No ranges over the phone, no obligation."}}]}
@@ -22,8 +22,11 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand">
-      <span class="brand-name">Don Morrison</span>
-      <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      <img src="assets/fortress-icon.svg" alt="" class="brand-mark">
+      <span class="brand-text">
+        <span class="brand-name">Fortress Gutter Co.</span>
+        <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      </span>
     </div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
@@ -74,9 +77,19 @@
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-honest">Gutter, gutter protection, and lighting services are provided through LeafFilter. This page belongs to Don Morrison, your local contact for those services in Broward and Palm Beach counties — quotes requested here go directly to Don, not to a national call center.</p>
-    <p class="footer-small">© 2026 Don Morrison · Fort Lauderdale, FL</p>
+    <p class="footer-small">© 2026 Fortress Gutter Co. · Fort Lauderdale, FL</p>
     <p class="footer-small">Photos: Unsplash</p>
   </div>
 </footer>
+<script>
+(function(){
+  // Scroll reveal — attributes are applied by JS only, so with JS disabled every section stays fully visible.
+  var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.path h2, .path .cards, .path .path-lede').forEach(function(el, i){
+    el.setAttribute('data-reveal', (i % 3 === 1) ? '2' : '');
+    io.observe(el);
+  });
+})();
+</script>
 </body>
 </html>

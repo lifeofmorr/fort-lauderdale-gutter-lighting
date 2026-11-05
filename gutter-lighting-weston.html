@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gutters, Gutter Protection & Lighting in Weston, FL | Don Morrison</title>
+<title>Gutters, Gutter Protection & Lighting in Weston, FL | Fortress Gutter Co.</title>
 <meta name="description" content="Gutter protection, seamless gutters, and outdoor lighting for homes and businesses in Weston, FL — including Bonaventure, Savanna, and The Ridges. Free inspection and exact written quote from Don Morrison. Services provided through LeafFilter.">
 <meta name="google-site-verification" content="QB-ssv-MjZdVz-dJ-gzDWv2qY6BC9JkV1xSJGt7VMZ8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Weston","provider":{"@type":"LocalBusiness","name":"Don Morrison — Gutters, Gutter Protection & Lighting"},"areaServed":{"@type":"City","name":"Weston","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Weston, FL. Services provided through LeafFilter."}
+{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Weston","provider":{"@type":"LocalBusiness","name":"Fortress Gutter Co."},"areaServed":{"@type":"City","name":"Weston","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Weston, FL. Services provided through LeafFilter."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My Weston community has an HOA — can I still add permanent roofline lighting?","acceptedAnswer":{"@type":"Answer","text":"Many Weston communities have exterior guidelines, so we start by checking yours together before anything is quoted. Permanent roofline systems sit discreetly under the eaves, and Don will walk you through what your community typically requires so there are no surprises."}},{"@type":"Question","name":"Weston homes have big rooflines — how does the quote work for a larger property?","acceptedAnswer":{"@type":"Answer","text":"The free inspection measures your full roofline and gutter runs, and you get one exact written quote for the whole property — main house and every wing included. No per-foot phone estimates."}},{"@type":"Question","name":"Do you handle commercial properties in Weston?","acceptedAnswer":{"@type":"Answer","text":"Yes — offices, retail at Weston Town Center, and properties along the Weston Road corridor, plus HOA and property-manager accounts with one local contact for every building."}}]}
@@ -22,8 +22,11 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand">
-      <span class="brand-name">Don Morrison</span>
-      <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      <img src="assets/fortress-icon.svg" alt="" class="brand-mark">
+      <span class="brand-text">
+        <span class="brand-name">Fortress Gutter Co.</span>
+        <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      </span>
     </div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
@@ -74,9 +77,19 @@
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-honest">Gutter, gutter protection, and lighting services are provided through LeafFilter. This page belongs to Don Morrison, your local contact for those services in Broward and Palm Beach counties — quotes requested here go directly to Don, not to a national call center.</p>
-    <p class="footer-small">© 2026 Don Morrison · Fort Lauderdale, FL</p>
+    <p class="footer-small">© 2026 Fortress Gutter Co. · Fort Lauderdale, FL</p>
     <p class="footer-small">Photos: Unsplash</p>
   </div>
 </footer>
+<script>
+(function(){
+  // Scroll reveal — attributes are applied by JS only, so with JS disabled every section stays fully visible.
+  var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.path h2, .path .cards, .path .path-lede').forEach(function(el, i){
+    el.setAttribute('data-reveal', (i % 3 === 1) ? '2' : '');
+    io.observe(el);
+  });
+})();
+</script>
 </body>
 </html>

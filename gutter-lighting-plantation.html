@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gutters, Gutter Protection & Lighting in Plantation, FL | Don Morrison</title>
+<title>Gutters, Gutter Protection & Lighting in Plantation, FL | Fortress Gutter Co.</title>
 <meta name="description" content="Gutter protection, seamless gutters, and outdoor lighting for homes and businesses in Plantation, FL — including Plantation Acres and Plantation Park. Free inspection and exact written quote from Don Morrison. Services provided through LeafFilter.">
 <meta name="google-site-verification" content="QB-ssv-MjZdVz-dJ-gzDWv2qY6BC9JkV1xSJGt7VMZ8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Plantation","provider":{"@type":"LocalBusiness","name":"Don Morrison — Gutters, Gutter Protection & Lighting"},"areaServed":{"@type":"City","name":"Plantation","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Plantation, FL. Services provided through LeafFilter."}
+{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Plantation","provider":{"@type":"LocalBusiness","name":"Fortress Gutter Co."},"areaServed":{"@type":"City","name":"Plantation","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Plantation, FL. Services provided through LeafFilter."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"I have a big lot in Plantation Acres with a long roofline — how is pricing handled?","acceptedAnswer":{"@type":"Answer","text":"By the property, not by the phone. The free inspection measures your full roofline and gutter run, and you receive one exact written quote for the whole job — long runs, outbuildings, and all."}},{"@type":"Question","name":"The oak canopy over my Plantation home fills my gutters every season. Will guards actually help?","acceptedAnswer":{"@type":"Answer","text":"That is exactly the problem a fitted guard system is built for: leaves and debris stay on top and blow off, while water passes through into the gutter. The inspection confirms your gutter size and pitch can carry Plantation's summer downpours."}},{"@type":"Question","name":"Do you handle commercial properties and HOAs in Plantation?","acceptedAnswer":{"@type":"Answer","text":"Yes — offices, retail, and community properties across Plantation, including multi-building accounts through an HOA or property manager, with one local contact for every roofline."}}]}
@@ -22,8 +22,11 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand">
-      <span class="brand-name">Don Morrison</span>
-      <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      <img src="assets/fortress-icon.svg" alt="" class="brand-mark">
+      <span class="brand-text">
+        <span class="brand-name">Fortress Gutter Co.</span>
+        <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      </span>
     </div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
@@ -74,9 +77,19 @@
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-honest">Gutter, gutter protection, and lighting services are provided through LeafFilter. This page belongs to Don Morrison, your local contact for those services in Broward and Palm Beach counties — quotes requested here go directly to Don, not to a national call center.</p>
-    <p class="footer-small">© 2026 Don Morrison · Fort Lauderdale, FL</p>
+    <p class="footer-small">© 2026 Fortress Gutter Co. · Fort Lauderdale, FL</p>
     <p class="footer-small">Photos: Unsplash</p>
   </div>
 </footer>
+<script>
+(function(){
+  // Scroll reveal — attributes are applied by JS only, so with JS disabled every section stays fully visible.
+  var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.path h2, .path .cards, .path .path-lede').forEach(function(el, i){
+    el.setAttribute('data-reveal', (i % 3 === 1) ? '2' : '');
+    io.observe(el);
+  });
+})();
+</script>
 </body>
 </html>

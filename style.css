@@ -1,4 +1,4 @@
-/* Don Morrison — home services funnel (redesign 2026-11-01)
+/* Fortress Gutter Co. — home services funnel (redesign 2026-11-01)
    Cinematic / flagship standard. Standalone stylesheet for this funnel only.
    Palette: deep evergreen, warm cream, brass. Type: Fraunces display + Inter. */
 
@@ -69,7 +69,9 @@ h3 { font-size: 1.08rem; font-weight: 650; margin-bottom: 8px; letter-spacing: -
   border-bottom: 1px solid rgba(228, 221, 203, .8);
 }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 15px; padding-bottom: 15px; }
-.brand { display: flex; flex-direction: column; line-height: 1.25; text-decoration: none; color: inherit; }
+.brand { display: flex; flex-direction: row; align-items: center; line-height: 1.25; text-decoration: none; color: inherit; }
+.brand-mark{height:34px;width:auto;margin-right:10px;vertical-align:middle}
+.brand-text { display: flex; flex-direction: column; line-height: 1.25; }
 .brand-name { font-family: "Fraunces", Georgia, serif; font-size: 1.38rem; font-weight: 650; letter-spacing: -0.01em; }
 .brand-place { font-size: 0.8rem; color: var(--ink-soft); letter-spacing: 0.05em; }
 
@@ -310,7 +312,10 @@ a.chip:hover { background: rgba(176, 141, 79, .38); border-color: rgba(227, 201,
 }
 @media (max-width: 640px) {
   .brand-place { display: none; }
-  .brand-name { font-size: 1.45rem; }
+  .brand-name { font-size: 1.3rem; }
+  .brand-mark { height: 32px; margin-right: 9px; }
+  .header-inner { flex-wrap: wrap; row-gap: 10px; }
+  .site-nav { margin-left: auto; }
   .nav-cta { white-space: nowrap; padding: .62rem 1.15rem; }
 }
 @media (prefers-reduced-motion: reduce) {

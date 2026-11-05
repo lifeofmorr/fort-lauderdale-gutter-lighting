@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gutters, Gutter Protection & Lighting in Wilton Manors, FL | Don Morrison</title>
+<title>Gutters, Gutter Protection & Lighting in Wilton Manors, FL | Fortress Gutter Co.</title>
 <meta name="description" content="Gutter protection, seamless gutters, and outdoor lighting for homes and businesses in Wilton Manors, FL. Free inspection and exact written quote from Don Morrison. Services provided through LeafFilter.">
 <meta name="google-site-verification" content="QB-ssv-MjZdVz-dJ-gzDWv2qY6BC9JkV1xSJGt7VMZ8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Wilton Manors","provider":{"@type":"LocalBusiness","name":"Don Morrison — Gutters, Gutter Protection & Lighting"},"areaServed":{"@type":"City","name":"Wilton Manors","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Wilton Manors, FL. Services provided through LeafFilter."}
+{"@context":"https://schema.org","@type":"Service","name":"Gutter protection, seamless gutters, and outdoor lighting in Wilton Manors","provider":{"@type":"LocalBusiness","name":"Fortress Gutter Co."},"areaServed":{"@type":"City","name":"Wilton Manors","address":{"@type":"PostalAddress","addressRegion":"FL"}},"description":"Gutter guard systems, seamless gutter installation, and outdoor lighting for residential and commercial properties in Wilton Manors, FL. Services provided through LeafFilter."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"My Wilton Manors home is an older Florida house — can gutter protection go on my existing gutters?","acceptedAnswer":{"@type":"Answer","text":"In most cases, yes. The free inspection checks the condition of your current gutters and roofline first; if they are sound, a guard system is fitted over them. If sections are sagging or leaking, you will get one exact written quote for replacement — no surprises either way."}},{"@type":"Question","name":"Do you work on businesses along Wilton Drive?","acceptedAnswer":{"@type":"Answer","text":"Yes. Restaurants, shops, and offices along the Wilton Drive corridor and throughout Wilton Manors are welcome — commercial gutter and lighting quotes are handled the same way: free inspection, one exact written price, one local contact."}},{"@type":"Question","name":"Who does the installation, and who do I call with questions?","acceptedAnswer":{"@type":"Answer","text":"Installations are provided through LeafFilter's professional crews. Don Morrison is your local contact — he handles your quote and stays your single point of contact from the first call to the finished job."}}]}
@@ -22,8 +22,11 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <div class="brand">
-      <span class="brand-name">Don Morrison</span>
-      <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      <img src="assets/fortress-icon.svg" alt="" class="brand-mark">
+      <span class="brand-text">
+        <span class="brand-name">Fortress Gutter Co.</span>
+        <span class="brand-place">Gutters · Gutter Protection · Lighting — Fort Lauderdale</span>
+      </span>
     </div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
@@ -74,9 +77,19 @@
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-honest">Gutter, gutter protection, and lighting services are provided through LeafFilter. This page belongs to Don Morrison, your local contact for those services in Broward and Palm Beach counties — quotes requested here go directly to Don, not to a national call center.</p>
-    <p class="footer-small">© 2026 Don Morrison · Fort Lauderdale, FL</p>
+    <p class="footer-small">© 2026 Fortress Gutter Co. · Fort Lauderdale, FL</p>
     <p class="footer-small">Photos: Unsplash</p>
   </div>
 </footer>
+<script>
+(function(){
+  // Scroll reveal — attributes are applied by JS only, so with JS disabled every section stays fully visible.
+  var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.path h2, .path .cards, .path .path-lede').forEach(function(el, i){
+    el.setAttribute('data-reveal', (i % 3 === 1) ? '2' : '');
+    io.observe(el);
+  });
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 160" role="img" aria-label="Fortress Gutter Co. logo">
+  <g transform="translate(20,20)">
+    <path d="M28 96 V44 H44 V28 H76 V44 H92 V96" fill="none" stroke="#FAF8F2" stroke-width="8" stroke-linecap="square" stroke-linejoin="miter"/>
+    <path d="M60 44 V80 Q60 90 70 90 H76" fill="none" stroke="#FAF8F2" stroke-width="7" stroke-linecap="round"/></g>
+  <text x="168" y="76" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="46" letter-spacing="1.5" fill="#FAF8F2">FORTRESS</text>
+  <text x="170" y="118" font-family="Inter, -apple-system, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="16.5" letter-spacing="4.6" fill="#FAF8F2">GUTTER CO.</text>
+</svg>
